@@ -1,0 +1,435 @@
+<!doctype html>
+<html amp lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+	<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>    <title>AppGuard -ověření funkčnosti</title>
+    
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+	<meta name="description" content="AppGuard - nová generace bezpečnosti. Jedná se o nejmodernější včasné zabezpečení před škodlivými nástrahami nejen z internetu.">
+	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        font-family: 'Ubuntu', sans-serif;
+        font-display: swap;
+        font-size: 1.6rem;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+      h1,h2,h3 {
+        font-weight: bold;
+      }
+      h1 {
+        font-size: 3.2rem;
+        line-height: 1.2;
+      }
+      h2 {
+        font-size: 3.5rem;
+        line-height: 44px;
+        margin-top: 0;
+        margin-bottom: 25px;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-right {
+        text-align: right;
+      }
+      .flex {
+        display: flex;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+      .space-between {
+        justify-content: space-between;
+      }
+      .align-center {
+        align-items: center;
+      }
+      .justify-end {
+        justify-content: flex-end;
+      }
+      .flex-column {
+        flex-direction: column;
+      }
+      .mb-3 {
+        margin-bottom: 30px;
+      }
+      .mb-2 {
+        margin-bottom: 20px;
+      }
+      .mb-1 {
+        margin-bottom: 10px;
+      }
+      .mt-0 {
+        margin-top: 0;
+      }
+      .mb-0 {
+        margin-bottom: 0;
+      }
+      .ml-05 {
+        margin-left: 5px;
+      }
+      .pt-3 {
+        padding-top: 30px;
+      }
+      .large {
+        font-size: 3.4rem;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .uppercase {
+        text-transform: uppercase;
+      }
+      .text-primary {
+        color: #163f6f;
+      }
+      .anchor {
+      }
+      .container {
+        width: 100%;
+        max-width: 99.5rem;
+        margin: 0 auto;
+      }
+      .services-item {
+        max-width: 497.5px;
+      }
+      footer {
+        font-size: 1.4rem;
+        background-color: #000;
+        color: #fff;
+      }
+      footer .menu-item a:hover:before {
+        display: none;
+      }
+      .menu-wrapper,
+      .lang-wrapper {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
+      header {
+        background: #000;
+        color: white;
+        font-size: 1.7rem;
+      }
+      .menu-item a {
+        color: #fff;
+        padding: 0 2rem;
+        position: relative;
+        transition: all .25s ease-in-out;
+      }
+      .menu-item a:before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: transparent;
+        border-radius: 50%;
+        left: 0;
+        top: .55rem;
+        transition: all .25s ease-in-out;
+      }
+      .lang-item.active a {
+        font-weight: bold;
+        color: #2d68ac;
+      }
+      .lang-item {
+        padding: 0 .5rem;
+      }
+      .hero {
+        position: relative;
+        overflow: hidden;
+        min-height: 495px;
+      }
+      .hero-bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      .hero-inner {
+        position: relative;
+      }
+      .hero .btn {
+        margin-top: 2rem;
+      }
+      .btn {
+        font-size: 1.7rem;
+        padding: 2rem 1rem;
+        color: #000;
+        background-color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        min-width: 195px;
+        display: inline-block;
+        text-align: center;
+        border: 2px solid transparent;
+        transition: all .25s ease-in-out;
+      }
+      .btn-hero {
+        background: #235084;
+        color: #fff;
+        font-size: 2rem;
+        min-width: 235px;
+      }
+      .service-half {
+        width: 100%;
+      }
+      .services {
+        color: #fff;
+      }
+      .black-bg {
+        background-color: #000;
+      }
+      .blue-bg {
+        background-color: #235084;
+      }
+      .services-item p {
+        padding: 0 5.5rem;
+        font-size: 1.8rem;
+        margin: 0;
+      }
+      .services-item .btn-wrapper {
+        margin-top: 3.5rem;
+        width: 100%;
+      }
+      .quote {
+        padding: 7rem 0 6.5rem;
+      }
+      .footer-text {
+        padding: .75rem 0 0;
+      }
+      .footer-text:first-child {
+        border-bottom: 1px solid #fff;
+      }
+      .footer-logo {
+        margin-top: .75rem;
+      }
+      .footer-text p {
+        margin: 1rem 0;
+        line-height: 1.5;
+      }
+      .footer-text .menu-wrapper {
+        font-size: 1.7rem;
+        margin: 1rem 0 1.5rem;;
+      }
+      .footer-text .menu-item a {
+          padding: 0 3rem;
+      }
+      .footer-text .menu-item a:first-child {
+        padding-left: 0;
+      }
+      .footer-text a.phone:hover,
+      .footer-text a.mail:hover {
+        text-decoration: underline;
+      }
+      .menu-item a:hover,
+      .menu-item.active a,
+      .lang-item a:hover {
+        color: #2d68ac;
+        transition: all .25s ease-in-out;
+      }
+      .menu-item a:hover,
+      .menu-item.active a,
+      .lang-item a:hover {
+        color: #fff;
+        -webkit-text-stroke: .7px #fff;
+        transition: all .25s ease-in-out;
+      }
+      .menu-item a:hover:before {
+        background-color: #2d68ac;
+        transition: all .25s ease-in-out;
+      }
+      .btn:hover {
+        background-color: transparent;
+        color: #fff;
+        border-color: #fff;
+        transition: all .25s ease-in-out;
+      }
+      .btn-hero:hover {
+        border-color: #235084;
+        color: #235084;
+      }
+      @media screen and (min-width: 1000px) {
+        header {
+          padding: 2rem 0;
+        }
+        .lang-wrapper {
+          margin-left: 5.5rem;
+        }
+        .service-half {
+          padding: 6.5rem 0;
+        }
+        .service-half.black-bg {
+          padding-right: 1rem;
+        }
+        .service-half.blue-bg {
+          padding-left: 1rem;
+        }
+        .services-item .btn-wrapper .btn:nth-child(2) {
+          margin-left: 2rem;
+        }
+        .footer-text .menu-item a {
+          padding: 0 5rem;
+        }
+        .hero-bg amp-img img {
+          object-fit: cover;
+        }
+      }
+      @media screen and (max-width: 1000px) {
+        header {
+          padding: 0;
+          position: relative;
+        }
+        .container {
+          padding: 1rem 1.5rem;
+        }
+        .hero-bg amp-img img {
+          object-fit: cover;
+        }
+        .hero {
+          min-height: 415px;
+        }
+        h1 {
+          font-size: 2.8rem;
+        }
+        h2 {
+          font-size: 3rem;
+        }
+        .large {
+          font-size: 3rem;
+        }
+        .services {
+          flex-wrap: wrap;
+        }
+        .service-half {
+          justify-content: center;
+          padding: 3rem 1.5rem;
+        }
+        .quote {
+          padding: 3rem 1.5rem;
+        }
+        .services-item p {
+          padding: 0;
+          line-height: 1.2;
+        }
+        .footer-text {
+          flex-wrap: wrap;
+        }
+        .footer-address {
+          text-align: left;
+        }
+
+      }
+      @media screen and (max-width: 424px) {
+        .services-item .btn-wrapper .btn:nth-child(2) {
+          margin-top: 1rem;
+        }
+      }
+      @media screen and (max-width: 650px) {
+        .hero-inner {
+          text-align: center;
+        }
+        .header-inner {
+          flex-wrap: wrap;
+        }
+        .header-inner .menu {
+          width: 100%;
+        }
+        .lang-wrapper {
+          position: absolute;
+          right: 1rem;
+          top: 3.5rem;
+        }
+        .menu-wrapper {
+          width: 100%;
+          justify-content: center;
+          margin: 1.5rem 0 .5rem;
+        }
+        .footer-contact {
+          width: 100%;
+          text-align: center;
+          padding: 1rem 0;
+        }
+        .footer-text:last-child .container {
+          flex-wrap: wrap;
+        }
+        .footer-text .menu-item:last-child a {
+          padding-right: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+     
+    <header>
+      <div class="header-inner container flex space-between align-center">
+        <a href="index.html" class="logo">
+          <amp-img alt="CEZD logo"
+            src="img/cez.png"
+            width="85"
+            height="85"
+            layout="fixed">
+          </amp-img>
+        </a>
+       
+      </div>
+    </header>
+    <main>
+      <div class="hero flex align-center">
+        <div class="hero-bg">
+          <amp-img alt="AppGuard"
+            src="img/hero-min.webp"
+            width="1280"
+            height="497"
+            layout="fill">
+            <div fallback>
+            <amp-img src="img/hero-min.jpg"
+               width="1280"
+               height="497"
+               layout="fill">           
+          </amp-img>
+            </div>                              
+        </div>
+        <div class="hero-inner container">
+          <div>
+            <amp-img alt="Appguard logo"
+              src="img/appguard-logo.png"
+              width="302"
+              height="39"
+              layout="fixed">
+            </amp-img>
+            <h1>Ověření funkčnosti HTTPS spojení</h1>
+            <a href="https://sechp-apg-web01.sec.cezd.corp/AppGuardMS" class="btn btn-hero">AGMS konzole</a>
+          </div>
+        </div>
+      </div>
+      <div class="services flex justify-center">
+       
+       
+        <div class="service-half flex blue-bg">
+         
+        </div>
+      </div>
+          </main>
+   
+  </body>
+</html>

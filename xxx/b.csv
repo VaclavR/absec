@@ -1,0 +1,289 @@
+nodeID;Name;Cat 1 ID;Cat 2 ID;Cat 3 ID;Cat 4 ID;COUNTRY;Country ID
+9378;Ascoli Piceno (Italy) ;143;130;;;Italy;189
+9357;Národní park Camargue (France) ;161;163;161;151;France;187
+9356;Arles (France) ;130;;143;155;France;187
+9355;Pont du Gard (France) ;130;;143;;France;187
+9354;Les Baux de Provence (France) ;130;;143;155;France;187
+9353;Avignon (France) ;143;155;130;;France;187
+9352;Grand Canyon du Verdon (France) ;161;133;169;;France;187
+9351;Hamburk (Germany) ;143;155;143;;Germany;191
+9350;Monte Sant Angelo (Italy) ;130;;143;155;Italy;189
+9349;Poutní město Loreto (Italy) ;130;;143;141;Italy;189
+9348;Poutní město Assisi (Italy) ;130;;143;155;Italy;189
+9347;Vysoké Tatry (Slovakia) ;161;133;;;Slovakia;197
+9346;Thermal Park Bešeňová - termální akvapark (Slovakia) ;175;125;;;Slovakia;197
+9345;Kežmarok (Slovakia) ;143;155;143;141;Slovakia;197
+9344;Spišský hrad (Slovakia) ;143;135;130;;Slovakia;197
+9343;Nice (France) ;143;155;130;;France;187
+9341;Paříž (France) ;143;155;130;;France;187
+9340;Termální aquapark Tatralandia (Slovakia) ;175;125;169;171;Slovakia;197
+9358;Marseille (France) ;143;155;130;;France;187
+9359;Pyrenejský národní park (France) ;161;163;169;;France;187
+9360;Carcassonne (France) ;130;;143;155;France;187
+9371;Perugia (Italy) ;130;;143;155;Italy;189
+9372;Capri (Italy) ;143;155;;;Italy;189
+9373;Sorrento (Italy) ;143;155;130;;Italy;189
+9374;Amalfi (Italy) ;143;155;130;;Italy;189
+9375;Sardinie (Italy) ;143;130;;;Italy;189
+9376;Sicílie (Italy) ;143;130;;;Italy;189
+9377;Ancona (Italy) ;143;130;;;Italy;189
+9342;Mont Saint Michel (France) ;130;;143;141;France;187
+9370;Palermo (Italy) ;130;;143;155;Italy;189
+9369;Pompeje (Italy) ;130;;143;155;Italy;189
+9361;Florencie (Firenze) (Italy) ;143;155;130;;Italy;189
+9362;Věž v Pise (Italy) ;130;;143;;Italy;189
+9363;Remeš (France) ;143;155;130;;France;187
+9364;La Rochelle (France) ;130;;143;155;France;187
+9365;Saint-Émilion (France) ;143;155;130;;France;187
+9366;Bordeaux (France) ;143;155;130;;France;187
+9367;Zámek Orlík (Czechia) ;130;;143;135;Czechia;181
+9368;Neapol (Italy) ;130;;143;155;Italy;189
+9304;Miramare Castle (Italy) ;130;;143;135;Italy;189
+9305;Gori (Italy) ;130;;143;155;Italy;189
+9324;Lanový park Libín (Czechia) ;169;147;161;151;Czechia;181
+9307;Pordenone (Italy) ;130;;143;155;Italy;189
+9308;Udine (Italy) ;130;;143;155;Italy;189
+9309;Cividale del Friuli (Italy) ;130;;143;155;Italy;189
+9310;Tarvisio (Italy) ;161;133;169;153;Italy;189
+9311;Bologna (Boloňa) (Italy) ;130;;143;155;Italy;189
+9312;Moravský kras (Czechia) ;161;137;161;133;Czechia;181
+9313;Adršpašské a Teplické skály (Czechia) ;161;133;169;131;Czechia;181
+9314;Modena (Italy) ;130;;143;155;Italy;189
+9303;Trieste (Trieste) (Italy) ;130;;161;157;Italy;189
+9302;Belluno (Italy) ;161;133;169;153;Italy;189
+9291;Marianske Lazne (Czechia) ;143;155;143;155;Czechia;181
+9292;Venice (Venezia) (Italy) ;130;;143;155;Italy;189
+9293;Vicenza (Italy) ;130;;143;155;Italy;189
+9294;Island Mljet (Croatia) ;161;157;169;171;Croatia;183
+9295;Rab Island (Croatia) ;161;157;169;171;Croatia;183
+9296;Diving - Veruda (Croatia) ;169;159;169;171;Croatia;183
+9297;Diving - Rovinj (Croatia) ;169;159;169;171;Croatia;183
+9298;Diving - Stara Novalja (Croatia) ;169;159;169;171;Croatia;183
+9299;Cres Island (Croatia) ;161;157;169;171;Croatia;183
+9300;Verona (Italy) ;130;;143;155;Italy;189
+9301;Treviso (Italy) ;130;;143;155;Italy;189
+9290;Litomyšl (Czechia) ;143;155;130;;Czechia;181
+9315;Reggio Emilia (Reggio nell´Emilia) (Italy) ;130;;169;;Italy;189
+9330;Zámek Vranov nad Dyjí (Czechia) ;143;135;130;;Czechia;181
+9331;Františkovy Lázně (Czechia) ;143;155;130;;Czechia;181
+9332;Jeseníky (Czechia) ;161;133;169;;Czechia;181
+9333;Jizerské hory (Czechia) ;161;133;169;;Czechia;181
+9334;Hrad Kokořín (Czechia) ;130;;143;135;Czechia;181
+9335;Hrad Bouzov (Czechia) ;130;;143;135;Czechia;181
+9336;Zámek Jaroměřice nad Rokytnou (Czechia) ;130;;143;135;Czechia;181
+9337;Zámek Sychrov (Czechia) ;130;;143;135;Czechia;181
+9338;Banská Štiavnica (Slovakia) ;143;155;143;;Slovakia;197
+9339;Košice (Slovakia) ;143;155;130;;Slovakia;197
+9306;Aquileia (Italy) ;130;;143;155;Italy;189
+9329;Trenčín (Slovakia) ;143;155;143;135;Slovakia;197
+9328;Termální lázně Piešťany (Slovakia) ;143;155;;;Slovakia;197
+9316;Hrad Karlštejn (Czechia) ;130;;143;135;Czechia;181
+9317;Zámek Lednice (Czechia) ;130;;143;135;Czechia;181
+9318;Zámek Konopiště (Czechia) ;130;;143;135;Czechia;181
+9319;Zámek Hluboká (Czechia) ;130;;143;135;Czechia;181
+9320;Národní park České Švýcarsko (Czechia) ;161;163;161;133;Czechia;181
+9321;Karlovy Vary (Czechia) ;130;;143;155;Czechia;181
+9322;Krkonoše (Czechia) ;161;133;169;;Czechia;181
+9323;Český Krumlov (Czechia) ;130;;143;155;Czechia;181
+9325;Jánošíkovy dny v Terchové (Slovakia) ;145;;175;;Slovakia;197
+9326;Bratislava (Slovakia) ;143;155;130;;Slovakia;197
+9327;Hrad Červený kamen (Slovakia) ;130;;143;135;Slovakia;197
+9258;Val di Fiemme (Italy) ;161;133;161;163;Italy;189
+9257;Val di Sole (Italy) ;161;163;169;;Italy;189
+9256;Val di Non (Italy) ;161;163;169;;Italy;189
+9255;Aquapark Babylon + IQ park (Czechia) ;175;125;175;177;Czechia;181
+9259;Val di Fassa (Italy) ;161;133;161;163;Italy;189
+9260;Dolomiti - Sella mountain range (Italy) ;161;133;169;153;Italy;189
+9261;Heide Park (Germany) ;175;177;;;Germany;191
+9262;Padua (Italy) ;130;;143;155;Italy;189
+9263;Zadar (Croatia) ;143;155;;;Croatia;183
+9264;Kutna Hora (Czechia) ;130;;130;;Czechia;181
+9265;Split (Croatia) ;143;155;130;;Croatia;183
+9253;Olomouc (Czechia) ;130;143;;;Czechia;181
+9252;Plitvice Lakes National Park (Croatia) ;161;163;161;139;Croatia;183
+9251;Elbow (Czechia) ;130;;130;;Czechia;181
+9241;Rovereto (Italy) ;130;;143;155;Italy;189
+9242;Bolzano (Italy) ;130;;143;155;Italy;189
+9243;Europa Park (Germany) ;175;177;;;Germany;191
+9244;Brenta Dolomites (Italy) ;161;133;169;131;Italy;189
+9245;Sand (Czechia) ;130;;143;155;Czechia;181
+9246;Dubrovnik (Croatia) ;143;155;130;;Croatia;183
+9247;Domažlice (Czechia) ;130;;143;155;Czechia;181
+9248;Trakošćan Castle (Croatia) ;130;;143;135;Croatia;183
+9249;Jindřichův Hradec (Czechia) ;130;;143;155;Czechia;181
+9250;Mělník (Czechia) ;130;;143;155;Czechia;181
+9240;Trento (Trentino) (Italy) ;130;;143;135;Italy;189
+9266;Paklenica National Park (Croatia) ;161;163;169;131;Croatia;183
+9279;Telč (Czechia) ;143;155;143;;Czechia;181
+9280;Merano (Italy) ;130;;161;163;Italy;189
+9281;Opatija (Croatia) ;143;155;169;171;Croatia;183
+9282;Tree top trail - Bavarian Forest (Germany) ;175;177;161;151;Germany;191
+9283;Island Krk (Croatia) ;169;159;169;171;Croatia;183
+9284;Island Brac (Croatia) ;169;159;169;171;Croatia;183
+9285;Island Hvar (Croatia) ;169;171;169;159;Croatia;183
+9286;Island Pag (Croatia) ;169;171;169;159;Croatia;183
+9287;Korcula Island (Croatia) ;169;171;169;159;Croatia;183
+9288;Lake Vrana (Croatia) ;161;139;161;163;Croatia;183
+9289;Kromeriz (Czechia) ;130;;143;155;Czechia;181
+9278;Trogir (Croatia) ;143;155;169;171;Croatia;183
+9277;Kopački Rit Nature Reserve (Croatia) ;161;163;161;139;Croatia;183
+9276;Pula (Croatia) ;169;171;143;155;Croatia;183
+9267;Krka National Park (Croatia) ;161;163;161;173;Croatia;183
+9268;Marineland Marineland and AquaSplash (France) ;175;177;175;125;France;187
+9269;Asterix Amusement Park (France) ;175;177;;;France;187
+9270;Disneyland Paris (France) ;175;177;;;France;187
+9271;Risnjak National Park (Croatia) ;161;133;161;137;Croatia;183
+9254;Pardubice (Czechia) ;143;155;130;;Czechia;181
+9272;Zagreb (Croatia) ;143;155;130;;Croatia;183
+9273;Veliki Tabor Castle (Croatia) ;130;;143;135;Croatia;183
+9274;Makarska (Croatia) ;169;171;143;155;Croatia;183
+9275;Poreč (Croatia) ;143;155;169;171;Croatia;183
+9199;Villach (Austria) ;143;155;;;Austria;195
+9239;Rabkoland Amusement Park (Poland) ;175;177;;;Poland;193
+9238;Mirabilandia Amusement Park (Italy) ;175;177;175;125;Italy;189
+9237;Gardaland Amusement Park (Italy) ;175;177;175;125;Italy;189
+9236;Holiday park Plopsa (Germany) ;175;177;;;Germany;191
+9235;Terra Mitica Benidorm Holiday Park (Spain) ;175;177;;;Spain;199
+9190;Ski area Špičák Šumava (Czechia) ;169;153;161;133;Czechia;181
+9203;Heiligenblut (Austria) ;143;155;169;153;Austria;195
+9204;Spa town Bad Gastein (Austria) ;143;155;175;125;Austria;195
+9205;Lienz (Austria) ;143;155;169;153;Austria;195
+9206;Courmayeur (Italy) ;169;153;161;167;Italy;189
+9207;Gran Paradiso National Park (Italy) ;161;163;;;Italy;189
+9208;Innsbruck (Austria) ;143;155;;;Austria;195
+9209;Wattens - Home of Swarovski brand (Austria) ;130;;143;155;Austria;195
+9210;Bregenz - Lake Constance (Austria) ;143;155;161;139;Austria;195
+9211;Kufstein (Austria) ;143;155;130;;Austria;195
+9202;Hochesterwitz Castle (Austria) ;143;135;;;Austria;195
+9201;Friesach (Austria) ;143;155;130;;Austria;195
+9191;Ski Resort Dolni Morava - Sneznik (Czechia) ;169;153;161;133;Czechia;181
+9192;Ski resort Ještěd - Jizera Mountains (Czechia) ;169;153;161;133;Czechia;181
+9193;Skiaréna Jizerky (Czechia) ;169;153;161;133;Czechia;181
+9194;Hellbrunn Castle (Austria) ;143;135;;;Austria;195
+9195;Hallein + Salzwelten salt mine (Austria) ;143;155;130;;Austria;195
+9196;Medieval fortress Hohenwerfen (Austria) ;130;;143;135;Austria;195
+9197;Klagenfurt (Austria) ;143;155;;;Austria;195
+9198;Lake Worthersee (Austria) ;161;139;;;Austria;195
+9200;Garnitzklamm Gorge (Austria) ;161;133;;;Austria;195
+9212;Milan (Milan) (Italy) ;130;;143;155;Italy;189
+9213;Ski resort Lech (Austria) ;169;153;161;133;Austria;195
+9226;Tripsdrill Adventure Park (Germany) ;175;177;;;Germany;191
+9227;Phantasialand Amusement Park (Germany) ;175;177;;;Germany;191
+9228;Lago d´Orta (Italy) ;161;139;130;;Italy;189
+9229;Lake Maggiore (Italy) ;161;139;169;;Italy;189
+9230;Lake Como (Italy) ;161;139;130;;Italy;189
+9231;Lago d´Iseo (Italy) ;161;139;161;163;Italy;189
+9232;Lake Garda (Italy) ;161;139;130;;Italy;189
+9233;In Riva del Garda, Italy (Italy) ;161;139;130;;Italy;189
+9234;Aqualandia Benidorm - aquapark (Spain) ;175;125;;;Spain;199
+9225;Hradec Králové (Czechia) ;130;;143;155;Czechia;181
+9224;Walibi Amusement Park (Belgium) ;175;177;;;Belgium;179
+9223;BonBon Land Amusement Park (GermanyN) ;175;177;;;GermanyN;
+9214;Bergamo (Italy) ;130;;143;155;Italy;189
+9215;Prater Amusement Park (Austria) ;175;177;;;Austria;195
+9216;Tree Top Trail - Baumkronenweg Kopfing (Austria) ;175;177;161;151;Austria;195
+9217;Fantasiana - Erlebnispark Strasswalchen (Austria) ;175;177;;;Austria;195
+9218;Brescia (Italy) ;130;;143;135;Italy;189
+9219;Roznov pod Radhostem (Czechia) ;143;155;143;;Czechia;181
+9220;Brno (Czechia) ;130;;143;155;Czechia;181
+9221;Hansapark Amusement Park (Germany) ;175;177;;;Germany;191
+9222;Cremona (Italy) ;130;;143;;Italy;189
+9153;Esterházy Castle (Austria) ;143;135;;;Austria;195
+9154;Augsburg Monastery of St Florian (Austria) ;143;135;143;141;Austria;195
+9155;Benedictine monastery Kremsmunster (Austria) ;143;141;;;Austria;195
+9156;Tivoli (Italy) ;130;;143;155;Italy;189
+9157;Genoa (Italy) ;130;;169;171;Italy;189
+9158;Torino (Italy) ;130;;143;155;Italy;189
+9159;Albums (Italy) ;143;155;161;;Italy;189
+9160;Špindlerův Mlýn - ski center (Czechia) ;143;155;169;153;Czechia;181
+9161;Austrian Open Air Museum (Freilichtmuseum) (Austria) ;143;;130;;Austria;195
+9162;Deutschlandsberg (Austria) ;143;155;143;135;Austria;195
+9164;Mariazell (Austria) ;143;155;143;141;Austria;195
+9152;Lake Neusiedler See (Austria) ;161;139;;;Austria;195
+9151;Semmering (Austria) ;143;;130;;Austria;195
+9150;Krems an der Donau (Austria) ;143;155;130;;Austria;195
+9140;River Inn (Austria) ;161;167;169;165;Austria;195
+9141;Linz (Austria) ;143;155;130;;Austria;195
+9142;Rome (Italy) ;130;;143;155;Italy;189
+9143;Ski area Sportwelt Amade (Austria) ;169;153;;;Austria;195
+9144;Europa Sportregion Ski Resort (Hohe Tauern National Park) (Austria) ;169;153;161;133;Austria;195
+9145;Ski resort Silveretta Arena-Ischgl (Austria) ;169;153;161;133;Austria;195
+9146;Ski resort Kitzbuhel - Kirchberg (Austria) ;169;153;161;133;Austria;195
+9147;Ski resort Otztal - Soelden (Austria) ;169;153;161;133;Austria;195
+9148;Ski resort Arlberg (Austria) ;169;153;161;133;Austria;195
+9149;Ski resort Silvretta Nova-Montafon (Austria) ;169;153;161;149;Austria;195
+9163;Riegersburg Castle (Austria) ;143;135;130;;Austria;195
+9189;Ski resort Klínovec - Ore Mountains (Czechia) ;169;153;161;133;Czechia;181
+9178;Ski resort Bílá in Beskydy (Czechia) ;169;153;161;133;Czechia;181
+9179;Areal Lipno nad Vltavou (Czechia) ;169;153;;;Czechia;181
+9180;Říčky v Orlických horách - ski center (Czechia) ;169;153;;;Czechia;181
+9181;Levoča - Levoča altar (Slovakia) ;143;141;143;155;Slovakia;197
+9182;Lipno Treetop Trail (Czechia) ;161;151;175;;Czechia;181
+9183;Chambord Castle (France) ;130;;143;135;France;187
+9184;Saint-Tropez (France) ;130;;143;155;France;187
+9185;Pernštejn Castle (Czechia) ;143;135;130;;Czechia;181
+9186;Prague (Czechia) ;130;;143;155;Czechia;181
+9187;Open-air museum Vlkolínec (Slovakia) ;130;;143;;Slovakia;197
+9188;Bojnice Castle (Slovakia) ;130;;143;135;Slovakia;197
+9177;Ski resort Kaprun - Zell am See (Austria) ;169;153;161;149;Austria;195
+9176;Stubai Glacier (Stubaier Gletscher) (Austria) ;169;153;161;149;Austria;195
+9165;Admont - Benedictine monastery (Austria) ;143;141;143;155;Austria;195
+9166;Eisenerz (Mount Eisenberg) (Austria) ;161;133;143;155;Austria;195
+9167;Bad Ischl (+ KaiserVilla Imperial Villa) (Austria) ;143;155;143;;Austria;195
+9168;Hallstatter Zee (Austria) ;161;139;;;Austria;195
+9169;Traunsee (Gmunden) (Austria) ;143;135;161;139;Austria;195
+9170;Lake Wolfgangsee (Austria) ;161;139;;;Austria;195
+9171;Lake Mondsee (Austria) ;161;139;;;Austria;195
+9172;Valle d´Aosta (Italy) ;169;153;130;;Italy;189
+9173;Ramzová Jeseníky (Czechia) ;169;153;;;Czechia;181
+9174;Rokytnice nad Jizerou, Czech Republic (Czechia) ;169;153;;;Czechia;181
+9175;Janske Lazne - Montenegro (Czechia) ;169;153;;;Czechia;181
+9104;Aqua Dome Tirol Therme Langenfeld (Austria) ;175;125;;;Austria;195
+9105;Holiday Camping Leutasch - year-round campsite (Austria) ;127;;;;Austria;195
+9106;Zillertal Wohlfühlcamping - all year round camping (Austria) ;127;;;;Austria;195
+9107;Soelden Camping - all year round camping (Austria) ;127;;;;Austria;195
+9108;Dreiländereck Camping - all year round camping (Austria) ;127;;;;Austria;195
+9109;Camping Seehof - all year round camping (Austria) ;127;;;;Austria;195
+9110;Oetztal Arena Camping Krismer - all year round camp (Austria) ;127;;;;Austria;195
+9111;TerassenCamping Schlossberg Itter - all year round camping (Austria) ;127;;;;Austria;195
+9112;Camping Mayrhofen - all year round camping (Austria) ;127;;;;Austria;195
+9113;Eurocamping Holiday Park Fox Farm - all year round camping (Czechia) ;127;;;;Czechia;181
+9103;Graz (Austria) ;143;155;;;Austria;195
+9102;Camping Oetztal - all year round camping (Austria) ;127;;;;Austria;195
+9125;Vatican (Italy) ;130;;143;141;Italy;189
+9092;Bayern Park - amusement park (Germany) ;175;177;;;Germany;191
+9093;Panorama Camping Westendorf - all year round camping (Austria) ;127;;;;Austria;195
+9094;Camping Mauterndorf - all year round camping (Austria) ;127;;;;Austria;195
+9095;Grubhof camping - year-round camping (Austria) ;127;;;;Austria;195
+9096;Camping Arlberg - all year round camping (Austria) ;127;;;;Austria;195
+9097;Vienna (Wien, Vienna) (Austria) ;143;155;130;;Austria;195
+9098;Camping Tyrol Prutz - all year round camping (Austria) ;127;;;;Austria;195
+9099;Natterer See Camping - year-round camping (Austria) ;127;;;;Austria;195
+9100;Schluga Camping World - year-round camping (Austria) ;127;;;;Austria;195
+9101;Erlebnis Comfort Camping Aufenfeld - all year round camping (Austria) ;127;;;;Austria;195
+9114;Camping Bobrovník - all year round camping (Czechia) ;127;;;;Czechia;181
+9115;Camping Klášterský Mlýn - year-round camping (Czechia) ;127;;;;Czechia;181
+9116;Autocamp Zákoutí - year-round camping (Czechia) ;127;;;;Czechia;181
+9130;Camping Zirngast - all year round camping (Austria) ;127;;;;Austria;195
+9131;EisReisenWelt - ice caves (Austria) ;161;137;;;Austria;195
+9132;Grossglockner High Alpine Road - high mountain road (Austria) ;161;133;143;;Austria;195
+9133;Feldkirch - medieval town (Austria) ;143;155;130;;Austria;195
+9134;Melk Monastery (Austria) ;143;141;130;;Austria;195
+9135;Salzburg (Austria) ;143;155;130;;Austria;195
+9136;Liechtenstein Gorge (Lichtensteinklamm) (Austria) ;161;133;;;Austria;195
+9137;Krimmel waterfalls (Austria) ;161;173;;;Austria;195
+9138;Hintertux glacier (Austria) ;161;149;169;153;Austria;195
+9139;Dachstein caves (Austria) ;161;137;161;133;Austria;195
+9129;Camping-Platz Reiteralm - all year round camping (Austria) ;127;;;;Austria;195
+9128;Ski Resort Herlíkovice - Bubákov (Czechia) ;127;169;153;;Czechia;181
+9117;Camping Levoca Dolina - all year round camping (Slovakia) ;127;;;;Slovakia;197
+9118;ATC Bystrina - all year round camping (Slovakia) ;127;;;;Slovakia;197
+9119;Autocamping Turiec - all year round camping (Slovakia) ;127;;;;Slovakia;197
+9120;Sumava (Czechia) ;161;133;169;;Czechia;181
+9121;Castle Cervena Lhota (Czechia) ;130;;143;135;Czechia;181
+9122;Demanovska dolina (cave) (Slovakia) ;161;137;;;Slovakia;197
+9123;Kost Castle (Czechia) ;130;;143;135;Czechia;181
+9124;Camping Harrachov Jiskra - all year round camping (Czechia) ;127;;;;Czechia;181
+9126;Legoland Germany (Germany) ;175;177;123;;Germany;191
+9127;Plohn Freizeitpark - amusement park (Germany) ;175;177;;;Germany;191
+9091;Tropical Islands - Aquapark (Germany) ;175;125;;;Germany;191
