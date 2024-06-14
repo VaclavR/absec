@@ -75,9 +75,11 @@
         .amp-carousel-button {
             display: none !important;
         }
+
         * {
             box-sizing: border-box;
         }
+
 
         html {
             font-size: 62.5%;
@@ -457,6 +459,14 @@
             width: 56rem;
         }
 
+        .carousel-container {
+            width: 100%;
+            height: 49.5rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
         @media screen and (min-width: 1000px) {
             header {
                 padding: 2rem 0;
@@ -488,6 +498,32 @@
 
             .hero-bg amp-img img {
                 object-fit: cover;
+            }
+        }
+
+        @media screen and (max-width: 1240px) {
+            .hero-text {
+                width: auto;
+                font-size: 2.5rem;
+                line-height: 1.1;
+            }
+
+            .hero-image {
+                max-height: 100%;
+                max-width: 100%;
+                width: auto;
+            }
+
+            .hero-image img {
+                object-fit: contain;
+            }
+
+            .hero-left {
+                width: 60%;
+            }
+
+            .hero-right {
+                width: 40%;
             }
         }
 
@@ -546,6 +582,14 @@
             .footer-address {
                 text-align: left;
             }
+
+            .flex-md {
+                display: flex;
+            }
+
+            .carousel-container {
+                height: 33rem;
+            }
         }
 
         @media screen and (max-width: 424px) {
@@ -564,6 +608,14 @@
             }
 
             .header-inner .menu {
+                width: 100%;
+            }
+
+            .hero-right {
+                display: none;
+            }
+
+            .hero-left {
                 width: 100%;
             }
 
@@ -591,6 +643,15 @@
 
             .footer-text .menu-item:last-child a {
                 padding-right: 0;
+            }
+
+            .py-30px-sm {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+
+            .m-0-sm {
+                margin: 0;
             }
         }
     </style>
@@ -637,112 +698,117 @@
     </div>
 </header>
 <main>
-    <amp-carousel
-        width="1920"
-        height="495"
-        layout="responsive"
-        type="slides"
-        role="region"
-        autoplay
-        aria-label="Basic carousel">
-        <div class="hero flex align-center">
-            <div class="hero-bg">
-                <amp-img alt="AppGuard"
-                         src="img/banner-bg.jpg"
-                         width="1901"
-                         height="495"
-                         layout="fill">
-                </amp-img>
-            </div>
-            <div class="hero-inner flex align-center container">
-                <div>
-                    <amp-img alt="Appguard logo"
-                             src="img/appguard-logo.png"
-                             width="302"
-                             height="39"
-                             layout="fixed">
-                    </amp-img>
-                    <h1 class="w-560px hero-text">Nejmodernější včasné zabezpečení<br>před škodlivými nástrahami nejen<br>z internetu.
-                    </h1>
-                    <a href="app-guard.html" class="btn btn-hero">Více informací</a>
-                </div>
-                <div>
-                    <amp-img
-                        src="img/appguard-banner-8.png"
-                        alt="Obrázek s bezpečnostní tématikou"
-                        width="619"
-                        height="495"
-                        layout="fixed"
-                    >
+    <div class="carousel-container">
+        <amp-carousel
+            width="1920"
+            height="495"
+            layout="fill"
+            type="slides"
+            autoplay
+            aria-label="Basic carousel">
+            <div class="hero flex align-center">
+                <div class="hero-bg">
+                    <amp-img alt="AppGuard"
+                             src="img/banner-bg.jpg"
+                             width="1901"
+                             height="495"
+                             layout="fill">
                     </amp-img>
                 </div>
+                <div class="hero-inner flex align-center container">
+                    <div class="hero-left">
+                        <amp-img alt="Appguard logo"
+                                 src="img/appguard-logo.png"
+                                 width="302"
+                                 height="39"
+                                 layout="fixed">
+                        </amp-img>
+                        <h1 class="w-560px hero-text">Nejmodernější včasné zabezpečení<br>před škodlivými nástrahami
+                            nejen<br>z internetu.
+                        </h1>
+                        <a href="app-guard.html" class="btn btn-hero">Více informací</a>
+                    </div>
+                    <div class="hero-right">
+                        <amp-img
+                            src="img/appguard-banner-8.png"
+                            alt="Obrázek s bezpečnostní tématikou"
+                            width="619"
+                            height="495"
+                            layout="fixed"
+                            class="hero-image"
+                        >
+                        </amp-img>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="hero flex align-center">
-            <div class="hero-bg">
-                <amp-img alt="AppGuard"
-                         src="img/banner-bg.jpg"
-                         width="1901"
-                         height="495"
-                         layout="fill">
-                </amp-img>
-            </div>
-            <div class="hero-inner flex align-center container">
-                <div>
-                    <amp-img alt="Validato logo"
-                             src="img/validato-logo.png"
-                             width="220"
-                             height="67"
-                             layout="fixed">
-                    </amp-img>
-                    <h2 class="w-560px hero-text">Platforma pro ověřování<br /> bezpečnosti vašich zařízení</h2>
-                    <a href="validato.html" class="btn btn-hero">Více informací</a>
-                </div>
-                <div>
-                    <amp-img
-                        src="img/validato-banner.png"
-                        alt="Obrázek s bezpečnostní tématikou"
-                        width="619"
-                        height="495"
-                        layout="fixed"
-                    >
+            <div class="hero flex align-center">
+                <div class="hero-bg">
+                    <amp-img alt="AppGuard"
+                             src="img/banner-bg.jpg"
+                             width="1901"
+                             height="495"
+                             layout="fill">
                     </amp-img>
                 </div>
+                <div class="hero-inner flex align-center container">
+                    <div class="hero-left">
+                        <amp-img alt="Validato logo"
+                                 src="img/validato-logo.png"
+                                 width="220"
+                                 height="67"
+                                 layout="fixed">
+                        </amp-img>
+                        <h2 class="w-560px hero-text">Platforma pro ověřování<br/> bezpečnosti vašich zařízení</h2>
+                        <a href="validato.html" class="btn btn-hero">Více informací</a>
+                    </div>
+                    <div class="hero-right">
+                        <amp-img
+                            src="img/validato-banner.png"
+                            alt="Obrázek s bezpečnostní tématikou"
+                            width="619"
+                            height="495"
+                            layout="fixed"
+                            class="hero-image"
+                        >
+                        </amp-img>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="hero flex align-center">
-            <div class="hero-bg">
-                <amp-img alt="AppGuard"
-                         src="img/banner-bg.jpg"
-                         width="1901"
-                         height="495"
-                         layout="fill">
-                </amp-img>
-            </div>
-            <div class="hero-inner flex align-center container">
-                <div>
-                    <h2 class="text-blue">Služby</h2>
-                    <h2 class="w-560px hero-text">Poradenství, konzultace a<br /> služby v oblasti bezpečnosti</h2>
-                    <a href="sluzby.html" class="btn btn-hero">Více informací</a>
-                </div>
-                <div>
-                    <amp-img
-                        src="img/sluzby-banner.png"
-                        alt="Obrázek s bezpečnostní tématikou"
-                        width="619"
-                        height="495"
-                        layout="fixed"
-                    >
+            <div class="hero flex align-center">
+                <div class="hero-bg">
+                    <amp-img alt="AppGuard"
+                             src="img/banner-bg.jpg"
+                             width="1901"
+                             height="495"
+                             layout="fill">
                     </amp-img>
                 </div>
+                <div class="hero-inner flex align-center container">
+                    <div class="hero-left">
+                        <h2 class="text-blue">Služby</h2>
+                        <h2 class="w-560px hero-text">Poradenství, konzultace a<br/> služby v oblasti bezpečnosti</h2>
+                        <a href="sluzby.html" class="btn btn-hero">Více informací</a>
+                    </div>
+                    <div class="hero-right">
+                        <amp-img
+                            src="img/sluzby-banner.png"
+                            alt="Obrázek s bezpečnostní tématikou"
+                            width="619"
+                            height="495"
+                            layout="fixed"
+                            class="hero-image"
+                        >
+                        </amp-img>
+                    </div>
+                </div>
             </div>
-        </div>
-    </amp-carousel>
+        </amp-carousel>
+    </div>
     <div class="black-bg">
         <div class="container">
-            <div class="grid grid-cols-3 gap-20px py-26px">
+            <div class="grid grid-cols-3 gap-20px py-26px flex-md flex-column">
                 <div class="blue-bg px-20px py-26px white-text">
                     <div class="flex flex-column space-between h-full">
                         <div>
@@ -796,37 +862,6 @@
             </div>
         </div>
     </div>
-    <!--    <div class="services flex justify-center">-->
-    <!--        <div class="anchor" id="sluzby"></div>-->
-    <!--        <div class="service-half flex justify-end black-bg">-->
-    <!--            <div class="services-item text-center flex flex-column space-between">-->
-    <!--                <div>-->
-    <!--                    <h2>AppGuard</h2>-->
-    <!--                    <p>Software na ochranu operačního systému na úrovni kernelu s jedinečnou patentovanou technologií-->
-    <!--                        dědičnosti. AppGuard je novodobou reakcí na tradiční bezpečnostní technologie, jež mají své-->
-    <!--                        limity v rozpoznávání a včasném zablokování nových a neznámých zero-day útoků.</p>-->
-    <!--                </div>-->
-    <!--                <div class="btn-wrapper">-->
-    <!--                    <a href="app-guard.html" class="btn">Více informací</a>-->
-    <!--                    <a href="https://www.appguard.us/" class="btn">Appguard.US</a>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--        <div class="service-half flex blue-bg">-->
-    <!--            <div class="services-item text-center  flex flex-column space-between">-->
-    <!--                <div>-->
-    <!--                    <h2>Služby</h2>-->
-    <!--                    <p>Nabízíme poradenství, konzultace a služby v oblasti bezpečnosti. Můžeme vám jednoduše pomoci-->
-    <!--                        získat různé typy bezpečnostních certifikátů jako jsou ISO 27001 (bezpečnost informací) nebo-->
-    <!--                        dosažení standardu TISAX. Službami v oblasti ISMS se zabýváme již dlouhá léta a můžeme vám-->
-    <!--                        poskytnout řadu zajímavých referencí na vyžádání.</p>-->
-    <!--                </div>-->
-    <!--                <div class="btn-wrapper">-->
-    <!--                    <a href="contact.html" class="btn">Kontaktujte nás</a>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
     <div class="quote text-center">
         <p class="large bold">„AppGuard by měl být na každém systému<br> Windows na světě.“ </p>
         <p class="author text-primary"><span class="bold">Bob Bigman </span><br>bývalý CISO, CIA</p>

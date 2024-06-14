@@ -92,6 +92,7 @@
 
         h1, h2, h3 {
             font-weight: bold;
+            margin: 0;
         }
 
         h1 {
@@ -137,6 +138,7 @@
 
         p {
             font-size: 1.8rem;
+            margin-bottom: 0;
         }
 
         .justify-end {
@@ -156,7 +158,7 @@
         }
 
         .mb-1 {
-            margin-bottom: 10px;
+            margin-bottom: 1rem;
         }
 
         .mt-0 {
@@ -165,6 +167,10 @@
 
         .mb-0 {
             margin-bottom: 0;
+        }
+
+        .m-0 {
+            margin: 0;
         }
 
         .ml-05 {
@@ -255,28 +261,6 @@
             padding: 0 .5rem;
         }
 
-        .hero {
-            position: relative;
-            overflow: hidden;
-            min-height: 495px;
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
-
-        .hero-inner {
-            position: relative;
-        }
-
-        .hero .btn {
-            margin-top: 2rem;
-        }
-
         .btn {
             font-size: 1.7rem;
             padding: 2rem 1rem;
@@ -291,21 +275,6 @@
             transition: all .25s ease-in-out;
         }
 
-        .btn-hero {
-            background: #235084;
-            color: #fff;
-            font-size: 2rem;
-            min-width: 235px;
-        }
-
-        .service-half {
-            width: 100%;
-        }
-
-        .services {
-            color: #fff;
-        }
-
         .black-bg {
             background-color: #000;
         }
@@ -314,7 +283,11 @@
             background-color: #235084;
         }
 
-        .white-text {
+        .white-bg {
+            background-color: #fff;
+        }
+
+        .text-white {
             color: #fff;
         }
 
@@ -322,12 +295,32 @@
             display: grid;
         }
 
+        .grid-cols-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
         .grid-cols-3 {
             grid-template-columns: repeat(3, 1fr);
         }
 
+        .gap-10px {
+            gap: 1rem;
+        }
+
         .gap-20px {
             gap: 2rem;
+        }
+
+        .gap-40px {
+            gap: 4rem;
+        }
+
+        .gap-x-40px {
+            column-gap: 4rem;
+        }
+
+        .gap-y-60px {
+            row-gap: 6rem;
         }
 
         .over-two-last-cols {
@@ -344,15 +337,6 @@
             padding: 0 5.5rem;
             font-size: 1.8rem;
             margin: 0;
-        }
-
-        .services-item .btn-wrapper {
-            margin-top: 3.5rem;
-            width: 100%;
-        }
-
-        .quote {
-            padding: 7rem 0 6.5rem;
         }
 
         .footer-text {
@@ -410,16 +394,68 @@
             transition: all .25s ease-in-out;
         }
 
-        .btn:hover {
-            background-color: transparent;
-            color: #fff;
-            border-color: #fff;
-            transition: all .25s ease-in-out;
+        .relative {
+            position: relative;
         }
 
-        .btn-hero:hover {
-            border-color: #235084;
-            color: #235084;
+        .overlayed-image {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .w-600px {
+            width: 60rem;
+        }
+
+        .gap-40px {
+            gap: 4rem;
+        }
+
+        .pb-60px {
+            padding-bottom: 6rem;
+        }
+
+        .p-40px {
+            padding: 4rem;
+        }
+
+        .py-60px {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+
+        .my-70px {
+            margin-top: 7rem;
+            margin-bottom: 7rem;
+        }
+
+        .mt-0 {
+            margin-top: 0;
+        }
+
+        .text-20px {
+            font-size: 2rem;
+        }
+
+        .text-24px {
+            font-size: 2.4rem;
+        }
+
+        .leading-small {
+            line-height: 1.125;
+        }
+
+        .text-30px {
+            font-size: 3rem;
+        }
+
+        .text-48px {
+            font-size: 4.8rem;
+        }
+
+        .bg-grey {
+            background-color: #F3F3F3;
         }
 
         @media screen and (min-width: 1000px) {
@@ -429,18 +465,6 @@
 
             .lang-wrapper {
                 margin-left: 5.5rem;
-            }
-
-            .service-half {
-                padding: 6.5rem 0;
-            }
-
-            .service-half.black-bg {
-                padding-right: 1rem;
-            }
-
-            .service-half.blue-bg {
-                padding-left: 1rem;
             }
 
             .services-item .btn-wrapper .btn:nth-child(2) {
@@ -456,6 +480,16 @@
             }
         }
 
+        @media screen and (max-width: 1200px) {
+            .hidden-lg {
+                display: none;
+            }
+
+            .w-auto-lg {
+                width: auto;
+            }
+        }
+
         @media screen and (max-width: 1000px) {
             header {
                 padding: 0;
@@ -463,16 +497,14 @@
             }
 
             .container {
-                padding: 1rem 1.5rem;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
             }
 
             .hero-bg amp-img img {
                 object-fit: cover;
             }
 
-            .hero {
-                min-height: 415px;
-            }
 
             h1 {
                 font-size: 2.8rem;
@@ -480,23 +512,6 @@
 
             h2 {
                 font-size: 3rem;
-            }
-
-            .large {
-                font-size: 3rem;
-            }
-
-            .services {
-                flex-wrap: wrap;
-            }
-
-            .service-half {
-                justify-content: center;
-                padding: 3rem 1.5rem;
-            }
-
-            .quote {
-                padding: 3rem 1.5rem;
             }
 
             .services-item p {
@@ -521,9 +536,6 @@
         }
 
         @media screen and (max-width: 650px) {
-            .hero-inner {
-                text-align: center;
-            }
 
             .header-inner {
                 flex-wrap: wrap;
@@ -557,6 +569,27 @@
 
             .footer-text .menu-item:last-child a {
                 padding-right: 0;
+            }
+
+            .flex-sm {
+                display: flex;
+            }
+
+            .gap-20px-sm {
+                gap: 2rem;
+            }
+
+            .flex-column-sm {
+                flex-direction: column;
+            }
+
+            .py-30px-sm {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+
+            .m-0-sm {
+                margin: 0;
             }
         }
     </style>
@@ -603,74 +636,162 @@
     </div>
 </header>
 <main>
-    <div class="container">
+    <div class="container py-60px py-30px-sm">
         <h1>Služby</h1>
-        <p>Nabízíme poradenství, konzultace a služby v oblasti bezpečnosti. Můžeme vám jednoduše pomoci získat různé
-            typy bezpečnostních
-            certifikátů jako jsou ISO 27001 (bezpečnost informací), ISO 27701, ISO 22301 (Bezpečnost a odolnost) nebo
-            dosažení standardu TISAX</p>
+        <p>Nabízíme poradenství, konzultace a služby v oblasti bezpečnosti. Můžeme vám jednoduše pomoci získat různé
+            typy bezpečnostních certifikátů jako jsou ISO 27001 (bezpečnost informací), ISO 27701, ISO 22301 (Bezpečnost
+            a odolnost) nebo dosažení standardu TISAX</p>
+    </div>
+    <div class="blue-bg my-70px m-0-sm">
+        <div class="container py-60px py-30px-sm">
+            <div class="flex gap-40px">
+                <div class="text-white w-600px w-auto-lg">
+                    <h2>Bezpečnostní certifikáty</h2>
+                    <p>Zaručte si bezpečnost a spolehlivost. Naše certifikace v oblasti informační bezpečnosti poskytnou
+                        kompletní záruku ochrany vašich dat a bezproblémového provozu vašeho podnikání. </p>
+                    <p>S našimi osvědčenými postupy a uznávanými certifikacemi budete mít jistotu, že vaše podnikání je
+                        v
+                        bezpečí a připraveno čelit současným i budoucím výzvám v oblasti kybernetické bezpečnosti.</p>
+                </div>
+                <div class="relative hidden-lg">
+                    <amp-img src="img/sluzby-page-banner.png" width="442" height="442" class="overlayed-image"
+                             alt="obrázek z bezpečnostní tématikou"></amp-img>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pb-60px py-30px-sm">
+        <div class="grid gap-20px">
+            <div class="grid grid-cols-3 gap-20px flex-sm flex-column">
+                <div class="grey-card">
+                    <h3 class="text-30px">TISAX</h3>
+                    <p>Získejte s naší pomocí certifikaci TISAX
+                        a zajistěte si přístup k příležitostem v
+                        automobilovém průmyslu díky
+                        důvěryhodnosti vaší bezpečnosti a
+                        ochrany informací.</p>
+                </div>
+                <div class="grey-card">
+                    <h3 class="text-30px">ISO 27001</h3>
+                    <p>Připravíme vás na certifikaci ISO
+                        27001, která prokazuje kompetentnost
+                        a efektivitu vašeho řízení bezpečnosti
+                        informací. Získáte přístup tam, kde je
+                        certifikace požadována legislativou,
+                        výběrovými řízeními nebo očekáváními
+                        partnerů.</p>
+                </div>
+                <div class="grey-card">
+                    <h3 class="text-30px">ISO 27701</h3>
+                    <p>Nechte se námi připravit na získání
+                        certifikace ISO 27701 a posilte důvěru
+                        vašich klientů díky prokazatelné
+                        ochraně osobních údajů a soukromí v
+                        souladu s mezinárodními standardy.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 gap-20px flex-sm flex-column">
+                <div class="grey-card">
+                    <h3 class="text-30px">ISO 22301</h3>
+                    <p>Připravíme vás na získání certifikace
+                        ISO 22301, což zvýší vaši
+                        konkurenceschopnost tím, že ostatním
+                        prokážete odolnost a kontinuitu
+                        provozu vaší organizace i v případě
+                        nepředvídaných událostí.</p>
+                </div>
+                <div class="grey-card over-two-last-cols">
+                    <h3 class="text-30px">DALŠÍ SLUŽBY</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In sem justo, commodo ut,
+                        suscipit at, pharetra vitae, orci. Aliquam id dolor. Curabitur bibendum justo non orci.
+                        Mauris elementum mauris vitae tortor. Pellentesque sapien. Vivamus luctus egestas
+                        leo. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Phasellus faucibus
+                        molestie nisl. Aliquam erat volutpat. Nullam lectus justo, vulputate eget mollis sed,
+                        tempor sed magna. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim.
+                        Etiam dictum tincidunt diam</p>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="blue-bg">
-        <div class="container">
-            <div class="white-text">
-                <h2>Bezpečnostní certifikáty</h2>
-                <p>Zaručte si bezpečnost a spolehlivost. Naše certifikace v oblasti
-                    informační bezpečnosti poskytnou kompletní záruku ochrany vašich
-                    dat a bezproblémového provozu vašeho podnikání.</p>
-                <p>S našimi osvědčenými postupy a uznávanými certifikacemi budete
-                    mít jistotu, že vaše podnikání je v bezpečí a připraveno čelit
-                    současným i budoucím výzvám v oblasti kybernetické bezpečnosti.</p>
+        <div class="container py-60px py-30px-sm">
+            <h3 class="text-30px text-white">Profesní certifikace našich konzultantů</h3>
+            <div class="grid grid-cols-3 gap-10px flex-column flex-sm">
+                <div class="white-bg p-40px">
+                    <h3 class="text-30px mt-0">CISSP</h3>
+                    <p>Certifikát označuje odborníky s pokročilými znalostmi v ochraně informačních systémů, kteří jsou
+                        vybaveni strategiemi a postupy pro obranu proti kybernetickým hrozbám.</p>
+                </div>
+                <div class="white-bg p-40px">
+                    <h3 class="text-30px mt-0">CEH</h3>
+                    <p>Uděluje se jedincům s expertními schopnostmi v etickém hackování a penetračním testování,
+                        umožňující odhalování slabých míst před potenciálními útočníky.</p>
+                </div>
+                <div class="white-bg p-40px">
+                    <h3 class="text-30px mt-0">CRISC</h3>
+                    <p>Odráží schopnost nositelů efektivně identifikovat a řídit rizika v informačních systémech,
+                        zvyšující jejich odolnost.</p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="container grid gap-20px">
-        <div class="grid grid-cols-3 gap-20px">
-            <div class="grey-card">
-                <h3>TISAX</h3>
-                <p>Získejte s naší pomocí certifikaci TISAX
-                    a zajistěte si přístup k příležitostem v
-                    automobilovém průmyslu díky
-                    důvěryhodnosti vaší bezpečnosti a
-                    ochrany informací.</p>
-            </div>
-            <div class="grey-card">
-                <h3>ISO 27001</h3>
-                <p>Připravíme vás na certifikaci ISO
-                    27001, která prokazuje kompetentnost
-                    a efektivitu vašeho řízení bezpečnosti
-                    informací. Získáte přístup tam, kde je
-                    certifikace požadována legislativou,
-                    výběrovými řízeními nebo očekáváními
-                    partnerů.</p>
-            </div>
-            <div class="grey-card">
-                <h3>ISO 27701</h3>
-                <p>Nechte se námi připravit na získání
-                    certifikace ISO 27701 a posilte důvěru
-                    vašich klientů díky prokazatelné
-                    ochraně osobních údajů a soukromí v
-                    souladu s mezinárodními standardy.</p>
+    <div class="black-bg">
+        <div class="container py-60px py-30px-sm">
+            <div class="flex gap-40px align-center space-between flex-column-sm gap-20px-sm">
+                <p class="text-white text-30px">Reference Vám rádi zašleme na vyžádání.</p>
+                <div>
+                    <a href="contact.html" class="btn">kontaktujte nás</a>
+                </div>
             </div>
         </div>
-        <div class="grid grid-cols-3 gap-20px">
-            <div class="grey-card">
-                <h3>ISO 22301</h3>
-                <p>Připravíme vás na získání certifikace
-                    ISO 22301, což zvýší vaši
-                    konkurenceschopnost tím, že ostatním
-                    prokážete odolnost a kontinuitu
-                    provozu vaší organizace i v případě
-                    nepředvídaných událostí.</p>
-            </div>
-            <div class="grey-card over-two-last-cols">
-                <h3>DALŠÍ SLUŽBY</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In sem justo, commodo ut,
-                    suscipit at, pharetra vitae, orci. Aliquam id dolor. Curabitur bibendum justo non orci.
-                    Mauris elementum mauris vitae tortor. Pellentesque sapien. Vivamus luctus egestas
-                    leo. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Phasellus faucibus
-                    molestie nisl. Aliquam erat volutpat. Nullam lectus justo, vulputate eget mollis sed,
-                    tempor sed magna. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim.
-                    Etiam dictum tincidunt diam</p>
+    </div>
+    <div class="bg-grey">
+        <div class="container py-60px py-30px-sm">
+            <div class="grid grid-cols-2 gap-x-40px gap-y-60px flex-column flex-sm gap-20px-sm">
+                <div class="flex gap-40px align-center">
+                    <div>
+                        <amp-img src="img/certif.png" width="75" height="75" alt="obrázek certifikátu"
+                                 layout="fixed"></amp-img>
+                    </div>
+                    <div>
+                        <h3 class="text-20px mt-0 mb-1">Certifikace</h3>
+                        <p class="text-20px m-0">Poskytujeme průvodce a podporu při získání certifikací dalších
+                            standardů.</p>
+                    </div>
+                </div>
+                <div class="flex gap-40px align-center">
+                    <div>
+                        <amp-img src="img/implementace.png" width="75" height="75" alt="obrázek certifikátu"
+                                 layout="fixed"></amp-img>
+                    </div>
+                    <div>
+                        <h3 class="text-20px mt-0 mb-1">Implementace</h3>
+                        <p class="text-20px m-0">Navrhujeme a implementujeme opatření dle požadavků certifikací a
+                            nejlepších praxí v oblasti kybernetické bezpečnosti.</p>
+                    </div>
+                </div>
+                <div class="flex gap-40px align-center">
+                    <div>
+                        <amp-img src="img/analyza.png" width="75" height="75" alt="obrázek certifikátu"
+                                 layout="fixed"></amp-img>
+                    </div>
+                    <div>
+                        <h3 class="text-20px mt-0 mb-1">Analýza</h3>
+                        <p class="text-20px m-0">Provádíme analýzy rizik a navrhujeme účinná řešení pro bezpečnost
+                            informací.</p>
+                    </div>
+                </div>
+                <div class="flex gap-40px align-center">
+                    <div>
+                        <amp-img src="img/support.png" width="75" height="75" alt="obrázek certifikátu"
+                                 layout="fixed"></amp-img>
+                    </div>
+                    <div>
+                        <h3 class="text-20px mt-0 mb-1">Poradenství</h3>
+                        <p class="text-20px m-0">Nabízíme školení a poradenství pro účinnou implementaci bezpečnostních
+                            opatření a postupů.s</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

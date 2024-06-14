@@ -92,6 +92,7 @@
 
         h1, h2, h3 {
             font-weight: bold;
+            margin: 0;
         }
 
         h1, .h1 {
@@ -101,7 +102,7 @@
 
         h2, .h2 {
             font-size: 3.5rem;
-            line-height: 44px;
+            line-height: 1.2;
             margin-top: 0;
             margin-bottom: 25px;
         }
@@ -194,7 +195,6 @@
             background-color: #fff;
             text-transform: uppercase;
             font-weight: bold;
-            min-width: 195px;
             display: inline-block;
             text-align: center;
             border: 2px solid transparent;
@@ -288,11 +288,6 @@
             display: block;
         }
 
-
-        .info-text-wrapper {
-            max-width: 530px
-        }
-
         .benefit p {
             margin: 0;
             line-height: 1.2;
@@ -343,6 +338,10 @@
             flex-direction: column;
         }
 
+        .m-0 {
+            margin: 0;
+        }
+
         .mb-3 {
             margin-bottom: 30px;
         }
@@ -378,12 +377,17 @@
 
         .py-1px {
             padding-top: .1rem;
-            padding-bottom: .1rem.;
+            padding-bottom: .1rem;
         }
 
         .px-7px {
             padding-left: .7rem;
             padding-right: .7rem;
+        }
+
+        .px-40px {
+            padding-left: 4rem;
+            padding-right: 4rem;
         }
 
         .mt-20px {
@@ -393,6 +397,14 @@
 
         .h-full {
             height: 100%;
+        }
+
+        .w-half {
+            width: 50%;
+        }
+
+        .w-180px {
+            width: 18rem;
         }
 
         .w-250px {
@@ -419,10 +431,6 @@
             text-transform: uppercase;
         }
 
-        .text-primary {
-            color: #274f7c;
-        }
-
         .black-bg {
             background-color: #000;
             color: #fff;
@@ -434,14 +442,6 @@
 
         .pdf a:hover {
             text-decoration: none;
-        }
-
-        .info {
-            max-width: 100rem;
-        }
-
-        .text-blue {
-            color: #235084;
         }
 
         .text-green {
@@ -488,13 +488,39 @@
             gap: 2rem;
         }
 
+        .gap-70px {
+            gap: 7rem;
+        }
+
+        .gap-x-20px {
+            column-gap: 2rem;
+        }
+
+        .gap-y-30px {
+            row-gap: 3rem;
+        }
+
+
         .gap-24px {
-            gap: 2.4rem
+            gap: 2.4rem;
+        }
+
+        .gap-40px {
+            gap: 4rem;
+        }
+
+        .py-60px {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
         }
 
         .py-70px {
             padding-top: 7rem;
             padding-bottom: 7rem;
+        }
+
+        .leading-small {
+            line-height: 1.125;
         }
 
         @media screen and (min-width: 1000px) {
@@ -514,13 +540,6 @@
                 object-fit: cover;
             }
 
-            .benefit {
-                width: 50%;
-            }
-
-            .info-text-wrapper {
-                padding-right: 2rem;
-            }
         }
 
         @media screen and (max-width: 1000px) {
@@ -531,7 +550,8 @@
             }
 
             .container {
-                padding: 0 1.5rem;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
             }
 
             .hero-bg amp-img img {
@@ -555,21 +575,21 @@
                 text-align: left;
             }
 
-            .info {
-                padding: 3rem 0 0;
-            }
-
-            .button-us {
-                padding: 3rem 0;
-            }
-
-
             footer {
                 padding-bottom: 1rem;
+            }
+
+            .flex-column-md {
+                flex-direction: column;
+            }
+
+            .w-full-md {
+                width: 100%;
             }
         }
 
         @media screen and (max-width: 650px) {
+
             .header-inner {
                 flex-wrap: wrap;
             }
@@ -602,6 +622,37 @@
 
             .footer-text .menu-item:last-child a {
                 padding-right: 0;
+            }
+
+            .flex-sm {
+                display: flex;
+            }
+
+            .grid-cols-2-sm {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gap-20px-sm {
+                gap: 2rem;
+            }
+
+            .w-full-sm {
+                width: 100%;
+            }
+
+            .py-30px-sm {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+
+            .m-0-sm {
+                margin: 0;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .flex-xs {
+                display: flex;
             }
         }
     </style>
@@ -648,25 +699,23 @@
     </div>
 </header>
 <main>
-    <div class="intro">
-        <div class="container">
-            <h1 class="text-green text-48px flex align-center gap-20px mb-2">
-                <amp-img alt="Validato ikonka"
-                         src="img/validato-check.svg"
-                         width="42"
-                         height="42">
-                </amp-img>
-                Validato
-            </h1>
-            <p class="mb-0">Validato vyniká jako platforma pro simulaci narušení a útoků (BAS), která umožňuje IT
-                specialistům a bezpečnostním profesionálům bezpečně zkoumat různé scénáře hrozeb. Tím je možné posoudit
-                účinnost zavedených bezpečnostních opatření a schopnost systému detekovat potenciální hrozby.</p>
-        </div>
+    <div class="container py-60px py-30px-sm">
+        <h1 class="text-green text-48px flex align-center gap-20px mb-2">
+            <amp-img alt="Validato ikonka"
+                     src="img/validato-check.svg"
+                     width="42"
+                     height="42">
+            </amp-img>
+            Validato
+        </h1>
+        <p class="mb-0">Validato vyniká jako platforma pro simulaci narušení a útoků (BAS), která umožňuje IT
+            specialistům a bezpečnostním profesionálům bezpečně zkoumat různé scénáře hrozeb. Tím je možné posoudit
+            účinnost zavedených bezpečnostních opatření a schopnost systému detekovat potenciální hrozby.</p>
     </div>
     <div class="gray-bg">
-        <div class="container py-70px">
-            <div class="flex space-between gap-20px">
-                <div class="info-text-wrapper">
+        <div class="container py-70px py-30px-sm">
+            <div class="flex space-between gap-40px flex-column-md">
+                <div>
                     <h2 class="text-30px">Ověřte svou bezpečnost<br/>proti klíčovým kybernetickým hrozbám</h2>
                     <p class="text-20px">S Validatem můžete bezpečně a ekonomicky testovat a ověřovat konfigurace vašich
                         bezpečnostních
@@ -674,8 +723,8 @@
                         ransomwaru mohl ovlivnit vaše podnikání, je hlavní obavou jak pro vedení, tak pro bezpečnostní
                         týmy. Nechte si Validatem ukázat, co by se stalo.</p>
                 </div>
-                <div class="grid grid-cols-2 gap-24px">
-                    <div class="bg-white p-24px radius-14px w-250px">
+                <div class="grid grid-cols-2 gap-24px flex-sm flex-column">
+                    <div class="bg-white p-24px radius-14px w-250px w-full-md">
                         <div class="flex flex-column space-between h-full">
                             <div>
                                 <h3 class="text-24px leading-small">Top MITRE ATT&CK Techniques</h3>
@@ -698,7 +747,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-white p-24px radius-14px w-250px">
+                    <div class="bg-white p-24px radius-14px w-250px w-full-md">
                         <div class="flex flex-column space-between h-full">
                             <div>
                                 <h3 class="text-24px leading-small">NÚKIB Varování Únor 2022</h3>
@@ -725,11 +774,80 @@
             </div>
         </div>
     </div>
-    <div class="container">
-
+    <div class="container py-70px py-30px-sm">
+        <div class="flex gap-40px align-center flex-column-md">
+            <div>
+                <h2 class="text-30px">Jak Validato funguje?</h2>
+                <p>Validato napodobuje a simuluje TTPs (Taktiky, Techniky a Postupy) z MITRE ATT&CK, aby poskytl
+                    bezpečné, ale realistické prostředí pro neustálé testování konfigurací vašich bezpečnostních kontrol
+                    a poté je mapuje zpět na MITRE ATT&CK a SHIELD.</p>
+                <p>Na základě výsledků simulací Validato poskytuje návod, jak posílit vaši obranu proti klíčovým
+                    kybernetickým hrozbám.</p>
+            </div>
+            <div class="grid grid-cols-3 gap-x-20px gap-y-30px grid-cols-2-sm flex-xs flex-column">
+                <div class="flex flex-column align-center gap-10px w-180px">
+                    <amp-img src="img/play-btn.svg" width="40" height="40"></amp-img>
+                    <h3 class="text-20px text-center m-0">Nasazení</h3>
+                    <p class="text-center m-0">Náš průvodce nasazením Validatoru umožňuje jednoduché nasazení.</p>
+                </div>
+                <div class="flex flex-column align-center gap-10px w-180px">
+                    <amp-img src="img/screenplay.svg" width="30" height="40"></amp-img>
+                    <h3 class="text-20px text-center m-0">Scénáře</h3>
+                    <p class="text-center m-0">Vyberte svůj validační testovací scénář podle vašich preferencí.</p>
+                </div>
+                <div class="flex flex-column align-center gap-10px w-180px">
+                    <amp-img src="img/simulation.svg" width="45" height="40"></amp-img>
+                    <h3 class="text-20px text-center m-0">Simulace</h3>
+                    <p class="text-center m-0">Simulace útoků běží tiše na pozadí bez vlivu na produkční prostředí</p>
+                </div>
+                <div class="flex flex-column align-center gap-10px w-180px">
+                    <amp-img src="img/analysis.svg" width="40" height="40"></amp-img>
+                    <h3 class="text-20px text-center m-0">Analýza</h3>
+                    <p class="text-center m-0">Analyzujte data simulace a mapujte výsledky zpět na MITRE ATT&CK™ a
+                        SHIELD™</p>
+                </div>
+                <div class="flex flex-column align-center gap-10px w-180px">
+                    <amp-img src="img/repair.svg" width="40" height="40"></amp-img>
+                    <h3 class="text-20px text-center m-0">Oprava</h3>
+                    <p class="text-center m-0">Opravte nalezené chyby pomocí řešení nabízených přímo ve Validato</p>
+                </div>
+                <div class="flex flex-column align-center gap-10px w-180px">
+                    <amp-img src="img/security.svg" width="40" height="40"></amp-img>
+                    <h3 class="text-20px text-center m-0">Bezpečnost</h3>
+                    <p class="text-center m-0">Zabezpečte vaše zařízení podle zjištěných výsledků simulací</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="button-us black-bg text-center">
-        <a href="https://www.appguard.us/" class="btn">Více na www.Appguard.us</a>
+    <div class="black-bg">
+        <div class="container py-60px py-30px-sm">
+            <div class="grid grid-cols-2 gap-70px flex-sm flex-column gap-20px-sm">
+                <div class="flex justify-center">
+                    <a href="https://www.validato.io/" target="_blank" class="btn px-40px w-full-sm">VÍCE NA
+                        WWW.VALIDATO.IO</a>
+                </div>
+                <div class="flex justify-center">
+                    <a href="files/validato_datasheets_cs.pdf" target="_blank" class="btn btn px-40px w-full-sm">STÁHNĚTE
+                        SI NÁŠ DATASHEET</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blue-bg">
+        <div class="container py-70px py-30px-sm">
+            <div class="grid grid-cols-2 gap-40px flex-sm flex-column">
+                <div>
+                    <h3 class="text-30px text-white">Kybernetická obrana informovaná o hrozbách</h3>
+                    <p class="text-white">Validato přímo odpovídá na otázku, jak odolná může být organizace vůči známým
+                        kybernetickým hrozbám, pomocí nestranných a spolehlivých dat.</p>
+                    <p class="text-white">Existující testovací služby, jako je penetrace testování, nedostatečně
+                        ukazují, jak bezpečnostní kontroly dokážou chránit a detekovat kybernetické hrozby.</p>
+                </div>
+                <div>
+                    <amp-img src="img/validato-example.png" width="615" height="318" layout="responsive"></amp-img>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 <footer>
