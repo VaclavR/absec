@@ -12,57 +12,58 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <meta name="description"
           content="AppGuard - nová generace bezpečnosti. Jedná se o nejmodernější včasné zabezpečení před škodlivými nástrahami nejen z internetu.">
-    <style amp-boilerplate>body {
-        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-        animation: -amp-start 8s steps(1, end) 0s 1 normal both
-    }
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
 
-    @-webkit-keyframes -amp-start {
-        from {
-            visibility: hidden
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
         }
-        to {
-            visibility: visible
-        }
-    }
 
-    @-moz-keyframes -amp-start {
-        from {
-            visibility: hidden
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
         }
-        to {
-            visibility: visible
-        }
-    }
 
-    @-ms-keyframes -amp-start {
-        from {
-            visibility: hidden
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
         }
-        to {
-            visibility: visible
-        }
-    }
 
-    @-o-keyframes -amp-start {
-        from {
-            visibility: hidden
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
         }
-        to {
-            visibility: visible
-        }
-    }
 
-    @keyframes -amp-start {
-        from {
-            visibility: hidden
-        }
-        to {
-            visibility: visible
-        }
-    }</style>
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }</style>
     <noscript>
         <style amp-boilerplate>body {
             -webkit-animation: none;
@@ -245,7 +246,7 @@
             transition: all .25s ease-in-out;
         }
 
-        .lang-item.active a {
+        .lang-item.active {
             font-weight: bold;
             color: #2d68ac;
         }
@@ -689,7 +690,7 @@
             </ul>
 
             <ul class="lang-wrapper flex align-center">
-                <li class="lang-item active uppercase"><a href="#">cz</a></li>
+                <li class="lang-item active uppercase"><span>cz</span></li>
                 /
                 <li class="lang-item uppercase"><a href="index-en.html">en</a></li>
             </ul>
@@ -891,7 +892,7 @@
             <div class="flex space-between align-center container">
                 <ul class="menu-wrapper flex align-center">
                     <li class="menu-item"><a href="app-guard.html">AppGuard</a></li>
-                    <li class="menu-item"><a on="tap:sluzby.scrollTo">Služby</a></li>
+                    <li class="menu-item"><a href="sluzby.html">Služby</a></li>
                     <li class="menu-item"><a href="contact.html">Kontakt</a></li>
                 </ul>
                 <div class="footer-contact">
