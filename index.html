@@ -74,7 +74,15 @@
     </noscript>
     <style amp-custom>
         .amp-carousel-button {
-            display: none;
+            /*display: none;*/
+            cursor: pointer;
+            background-color: #235084;
+            border: 1px solid #235084;
+            transition: background-color .3s ease-in;
+        }
+
+        .amp-carousel-button:hover {
+            background-color: #143659;
         }
 
         * {
