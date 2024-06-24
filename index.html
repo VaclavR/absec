@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
     <title>ABsec - Official AppGuard Reseller for Europe</title>
     <link rel="canonical" href="https://absec.cz/">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
@@ -73,6 +74,56 @@
         }</style>
     </noscript>
     <style amp-custom>
+        .custom-slide {
+            display: none;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .custom-show {
+            display: block;
+            opacity: 1;
+        }
+
+        .custom-container .custom-slide:first-child {
+            display: block;
+            opacity: 1;
+        }
+
+        .custom-container {
+            position: relative;
+            width: 100%;
+            height: 49.5rem;
+            overflow: hidden;
+        }
+
+        .custom-btn {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #235084;
+            color: white;
+            margin: 10px;
+            position: absolute;
+            z-index: 100;
+            border: 1px solid #235084;
+            outline: none;
+        }
+
+        .custom-btn-next {
+            right: 10px;
+            bottom: 2rem;
+        }
+
+        .custom-btn-prev {
+            left: 10px;
+            bottom: 2rem
+        }
+
         .amp-carousel-button {
             /*display: none;*/
             cursor: pointer;
@@ -471,8 +522,8 @@
         .carousel-container {
             width: 100%;
             height: 49.5rem;
-            display: flex;
-            flex-direction: column;
+            /*display: flex;*/
+            /*flex-direction: column;*/
             position: relative;
         }
 
@@ -596,9 +647,6 @@
                 display: flex;
             }
 
-            .carousel-container {
-                height: 33rem;
-            }
         }
 
         @media screen and (max-width: 424px) {
@@ -663,8 +711,9 @@
                 margin: 0;
             }
 
-            .amp-carousel-button {
-                display: none;
+            .custom-container,
+            .carousel-container {
+                height: 42rem;
             }
         }
     </style>
@@ -684,6 +733,53 @@
         }
     </script>
 </amp-analytics>
+<amp-state id="customSlideState">
+    <script type="application/json">
+        {
+            "currentSlide": 0
+        }
+    </script>
+</amp-state>
+
+<amp-animation id="customFadeIn" layout="nodisplay">
+    <script type="application/json">
+        {
+            "duration": "1s",
+            "fill": "both",
+            "animations": [
+                {
+                    "selector": ".custom-slide.custom-show",
+                    "keyframes": {
+                        "opacity": [
+                            0,
+                            1
+                        ]
+                    }
+                }
+            ]
+        }
+    </script>
+</amp-animation>
+
+<amp-animation id="customFadeOut" layout="nodisplay">
+    <script type="application/json">
+        {
+            "duration": "1s",
+            "fill": "both",
+            "animations": [
+                {
+                    "selector": ".custom-slide",
+                    "keyframes": {
+                        "opacity": [
+                            1,
+                            0
+                        ]
+                    }
+                }
+            ]
+        }
+    </script>
+</amp-animation>
 <header>
     <div class="header-inner container flex space-between align-center">
         <a href="index.html" class="logo">
@@ -713,113 +809,255 @@
 </header>
 <main>
     <div class="carousel-container">
-        <amp-carousel
-            width="1920"
-            height="495"
-            layout="fill"
-            type="slides"
-            autoplay
-            aria-label="Basic carousel">
-            <div class="hero flex align-center">
-                <div class="hero-bg">
-                    <amp-img alt="AppGuard"
-                             src="img/banner-bg.jpg"
-                             width="1901"
-                             height="495"
-                             layout="fill">
-                    </amp-img>
-                </div>
-                <div class="hero-inner flex align-center container">
-                    <div class="hero-left">
-                        <amp-img alt="Appguard logo"
-                                 src="img/appguard-logo.png"
-                                 width="302"
-                                 height="39"
-                                 layout="fixed">
+        <div class="custom-container">
+            <div class="custom-slide"
+                 [class]="customSlideState.currentSlide == 0 ? 'custom-slide custom-show' : 'custom-slide'">
+                <div class="hero flex align-center">
+                    <div class="hero-bg">
+                        <amp-img alt="AppGuard"
+                                 src="img/banner-bg.jpg"
+                                 width="1901"
+                                 height="495"
+                                 layout="fill">
                         </amp-img>
-                        <h1 class="w-560px hero-text">Nejmodernější včasné zabezpečení<br>před škodlivými nástrahami
-                            nejen<br>z internetu.
-                        </h1>
-                        <a href="app-guard.html" class="btn btn-hero">Více informací</a>
                     </div>
-                    <div class="hero-right">
-                        <amp-img
-                            src="img/appguard-banner-8.png"
-                            alt="Obrázek s bezpečnostní tématikou"
-                            width="619"
-                            height="495"
-                            layout="fixed"
-                            class="hero-image"
-                        >
-                        </amp-img>
+                    <div class="hero-inner flex align-center container">
+                        <div class="hero-left">
+                            <amp-img alt="Appguard logo"
+                                     src="img/appguard-logo.png"
+                                     width="302"
+                                     height="39"
+                                     layout="fixed">
+                            </amp-img>
+                            <h1 class="w-560px hero-text">Nejmodernější včasné zabezpečení<br>před škodlivými nástrahami
+                                nejen<br>z internetu.
+                            </h1>
+                            <a href="app-guard.html" class="btn btn-hero">Více informací</a>
+                        </div>
+                        <div class="hero-right">
+                            <amp-img
+                                src="img/appguard-banner-8.png"
+                                alt="Obrázek s bezpečnostní tématikou"
+                                width="619"
+                                height="495"
+                                layout="fixed"
+                                class="hero-image"
+                            >
+                            </amp-img>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="hero flex align-center">
-                <div class="hero-bg">
-                    <amp-img alt="AppGuard"
-                             src="img/banner-bg.jpg"
-                             width="1901"
-                             height="495"
-                             layout="fill">
-                    </amp-img>
-                </div>
-                <div class="hero-inner flex align-center container">
-                    <div class="hero-left">
-                        <amp-img alt="Validato logo"
-                                 src="img/validato-logo.png"
-                                 width="220"
-                                 height="67"
-                                 layout="fixed">
+            <div class="custom-slide"
+                 [class]="customSlideState.currentSlide == 1 ? 'custom-slide custom-show' : 'custom-slide'">
+                <div class="hero flex align-center">
+                    <div class="hero-bg">
+                        <amp-img alt="AppGuard"
+                                 src="img/banner-bg.jpg"
+                                 width="1901"
+                                 height="495"
+                                 layout="fill">
                         </amp-img>
-                        <h2 class="w-560px hero-text">Platforma pro ověřování<br/> bezpečnosti vašich zařízení</h2>
-                        <a href="validato.html" class="btn btn-hero">Více informací</a>
                     </div>
-                    <div class="hero-right">
-                        <amp-img
-                            src="img/validato-banner.png"
-                            alt="Obrázek s bezpečnostní tématikou"
-                            width="619"
-                            height="495"
-                            layout="fixed"
-                            class="hero-image"
-                        >
-                        </amp-img>
+                    <div class="hero-inner flex align-center container">
+                        <div class="hero-left">
+                            <amp-img alt="Validato logo"
+                                     src="img/validato-logo.png"
+                                     width="220"
+                                     height="67"
+                                     layout="fixed">
+                            </amp-img>
+                            <h2 class="w-560px hero-text">Platforma pro ověřování<br/> bezpečnosti vašich zařízení</h2>
+                            <a href="validato.html" class="btn btn-hero">Více informací</a>
+                        </div>
+                        <div class="hero-right">
+                            <amp-img
+                                src="img/validato-banner.png"
+                                alt="Obrázek s bezpečnostní tématikou"
+                                width="619"
+                                height="495"
+                                layout="fixed"
+                                class="hero-image"
+                            >
+                            </amp-img>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="hero flex align-center">
-                <div class="hero-bg">
-                    <amp-img alt="AppGuard"
-                             src="img/banner-bg.jpg"
-                             width="1901"
-                             height="495"
-                             layout="fill">
-                    </amp-img>
-                </div>
-                <div class="hero-inner flex align-center container">
-                    <div class="hero-left">
-                        <h2 class="text-blue">Služby</h2>
-                        <h2 class="w-560px hero-text">Poradenství, konzultace a<br/> služby v oblasti bezpečnosti</h2>
-                        <a href="sluzby.html" class="btn btn-hero">Více informací</a>
-                    </div>
-                    <div class="hero-right">
-                        <amp-img
-                            src="img/sluzby-banner.png"
-                            alt="Obrázek s bezpečnostní tématikou"
-                            width="619"
-                            height="495"
-                            layout="fixed"
-                            class="hero-image"
-                        >
+            <div class="custom-slide"
+                 [class]="customSlideState.currentSlide == 2 ? 'custom-slide custom-show' : 'custom-slide'">
+                <div class="hero flex align-center">
+                    <div class="hero-bg">
+                        <amp-img alt="AppGuard"
+                                 src="img/banner-bg.jpg"
+                                 width="1901"
+                                 height="495"
+                                 layout="fill">
                         </amp-img>
+                    </div>
+                    <div class="hero-inner flex align-center container">
+                        <div class="hero-left">
+                            <h2 class="text-blue">Služby</h2>
+                            <h2 class="w-560px hero-text">Poradenství, konzultace a<br/> služby v oblasti bezpečnosti
+                            </h2>
+                            <a href="sluzby.html" class="btn btn-hero">Více informací</a>
+                        </div>
+                        <div class="hero-right">
+                            <amp-img
+                                src="img/sluzby-banner.png"
+                                alt="Obrázek s bezpečnostní tématikou"
+                                width="619"
+                                height="495"
+                                layout="fixed"
+                                class="hero-image"
+                            >
+                            </amp-img>
+                        </div>
                     </div>
                 </div>
             </div>
-        </amp-carousel>
+        </div>
+        <div>
+            <button on="tap:AMP.setState({customSlideState: {currentSlide: (customSlideState.currentSlide + 1) % 3}})"
+                    class="custom-btn custom-btn-next" id="nextButton">>
+            </button>
+            <button
+                on="tap:AMP.setState({customSlideState: {currentSlide: (customSlideState.currentSlide - 1 + 3) % 3}})"
+                class="custom-btn custom-btn-prev"><
+            </button>
+        </div>
     </div>
+    <script>
+      let clickTimer; // Globální proměnná pro udržování aktuálního timeru
+
+      function triggerNextClick() {
+        clearTimeout(clickTimer); // Vymazání aktuálního timeru
+        console.log('clearTimeout')
+        clickTimer = setTimeout(() => {
+          document.getElementById('nextButton').click(); // Automatické kliknutí na tlačítko "Next"
+          triggerNextClick(); // Nastavení nového timeru po kliknutí
+        }, 5000); // Nastavení 5sekundového timeru
+      }
+
+      function userClickedNext() {
+        clearTimeout(clickTimer); // Vymazání aktuálního timeru při manuálním kliknutí
+        triggerNextClick(); // Restart timeru pro další automatické kliknutí
+      }
+
+      // Inicializace automatického klikání při načtení stránky
+      window.onload = function () {
+        triggerNextClick(); // Spuštění automatického klikání
+      }
+
+    </script>
+    <!--    <div class="carousel-container">-->
+    <!--            <amp-carousel-->
+    <!--                width="1920"-->
+    <!--                height="495"-->
+    <!--                layout="fill"-->
+    <!--                type="slides"-->
+    <!--                autoplay-->
+    <!--                aria-label="Basic carousel">-->
+    <!--                <div class="hero flex align-center">-->
+    <!--                    <div class="hero-bg">-->
+    <!--                        <amp-img alt="AppGuard"-->
+    <!--                                 src="img/banner-bg.jpg"-->
+    <!--                                 width="1901"-->
+    <!--                                 height="495"-->
+    <!--                                 layout="fill">-->
+    <!--                        </amp-img>-->
+    <!--                    </div>-->
+    <!--                    <div class="hero-inner flex align-center container">-->
+    <!--                        <div class="hero-left">-->
+    <!--                            <amp-img alt="Appguard logo"-->
+    <!--                                     src="img/appguard-logo.png"-->
+    <!--                                     width="302"-->
+    <!--                                     height="39"-->
+    <!--                                     layout="fixed">-->
+    <!--                            </amp-img>-->
+    <!--                            <h1 class="w-560px hero-text">Nejmodernější včasné zabezpečení<br>před škodlivými nástrahami-->
+    <!--                                nejen<br>z internetu.-->
+    <!--                            </h1>-->
+    <!--                            <a href="app-guard.html" class="btn btn-hero">Více informací</a>-->
+    <!--                        </div>-->
+    <!--                        <div class="hero-right">-->
+    <!--                            <amp-img-->
+    <!--                                src="img/appguard-banner-8.png"-->
+    <!--                                alt="Obrázek s bezpečnostní tématikou"-->
+    <!--                                width="619"-->
+    <!--                                height="495"-->
+    <!--                                layout="fixed"-->
+    <!--                                class="hero-image"-->
+    <!--                            >-->
+    <!--                            </amp-img>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+
+    <!--                <div class="hero flex align-center">-->
+    <!--                    <div class="hero-bg">-->
+    <!--                        <amp-img alt="AppGuard"-->
+    <!--                                 src="img/banner-bg.jpg"-->
+    <!--                                 width="1901"-->
+    <!--                                 height="495"-->
+    <!--                                 layout="fill">-->
+    <!--                        </amp-img>-->
+    <!--                    </div>-->
+    <!--                    <div class="hero-inner flex align-center container">-->
+    <!--                        <div class="hero-left">-->
+    <!--                            <amp-img alt="Validato logo"-->
+    <!--                                     src="img/validato-logo.png"-->
+    <!--                                     width="220"-->
+    <!--                                     height="67"-->
+    <!--                                     layout="fixed">-->
+    <!--                            </amp-img>-->
+    <!--                            <h2 class="w-560px hero-text">Platforma pro ověřování<br/> bezpečnosti vašich zařízení</h2>-->
+    <!--                            <a href="validato.html" class="btn btn-hero">Více informací</a>-->
+    <!--                        </div>-->
+    <!--                        <div class="hero-right">-->
+    <!--                            <amp-img-->
+    <!--                                src="img/validato-banner.png"-->
+    <!--                                alt="Obrázek s bezpečnostní tématikou"-->
+    <!--                                width="619"-->
+    <!--                                height="495"-->
+    <!--                                layout="fixed"-->
+    <!--                                class="hero-image"-->
+    <!--                            >-->
+    <!--                            </amp-img>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+
+    <!--                <div class="hero flex align-center">-->
+    <!--                    <div class="hero-bg">-->
+    <!--                        <amp-img alt="AppGuard"-->
+    <!--                                 src="img/banner-bg.jpg"-->
+    <!--                                 width="1901"-->
+    <!--                                 height="495"-->
+    <!--                                 layout="fill">-->
+    <!--                        </amp-img>-->
+    <!--                    </div>-->
+    <!--                    <div class="hero-inner flex align-center container">-->
+    <!--                        <div class="hero-left">-->
+    <!--                            <h2 class="text-blue">Služby</h2>-->
+    <!--                            <h2 class="w-560px hero-text">Poradenství, konzultace a<br/> služby v oblasti bezpečnosti</h2>-->
+    <!--                            <a href="sluzby.html" class="btn btn-hero">Více informací</a>-->
+    <!--                        </div>-->
+    <!--                        <div class="hero-right">-->
+    <!--                            <amp-img-->
+    <!--                                src="img/sluzby-banner.png"-->
+    <!--                                alt="Obrázek s bezpečnostní tématikou"-->
+    <!--                                width="619"-->
+    <!--                                height="495"-->
+    <!--                                layout="fixed"-->
+    <!--                                class="hero-image"-->
+    <!--                            >-->
+    <!--                            </amp-img>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </amp-carousel>-->
+    <!--    </div>-->
     <div class="black-bg">
         <div class="container">
             <div class="grid grid-cols-3 gap-20px py-26px flex-md flex-column">
