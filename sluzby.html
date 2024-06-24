@@ -493,7 +493,7 @@
 
         @media screen and (max-width: 1000px) {
             header {
-                padding: 0;
+                padding: 1rem 0;
                 position: relative;
             }
 
@@ -537,6 +537,10 @@
         }
 
         @media screen and (max-width: 650px) {
+
+            .header-inner .menu-item.active a:before {
+                content: none;
+            }
 
             .header-inner {
                 flex-wrap: wrap;
