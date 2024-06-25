@@ -186,7 +186,7 @@
         }
 
         .pt-3 {
-            padding-top: 30px;
+            padding-top: 3rem;
         }
 
         .large {
@@ -301,6 +301,42 @@
             color: #235084;
         }
 
+        .bg-grey {
+            background-color: #F3F3F3;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .grid-cols-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-cols-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .gap-10px {
+            gap: 1rem;
+        }
+
+        .gap-20px {
+            gap: 2rem;
+        }
+
+        .gap-40px {
+            gap: 4rem;
+        }
+
+        .gap-x-40px {
+            column-gap: 4rem;
+        }
+
+        .gap-y-60px {
+            row-gap: 6rem;
+        }
+
         .hero-text {
             font-size: 3.5rem;
             margin: 3.5rem 0 0;
@@ -338,6 +374,7 @@
 
         .quote {
             padding: 7rem 0 6.5rem;
+            color: #fff;
         }
 
         .footer-text {
@@ -354,7 +391,7 @@
 
         .footer-text p {
             margin: 1rem 0;
-            line-height: 1.5;
+            line-height: 1.2;
         }
 
         .footer-text .menu-wrapper {
@@ -372,7 +409,8 @@
 
         .footer-text a.phone:hover,
         .footer-text a.mail:hover {
-            text-decoration: underline;
+            -webkit-text-stroke: .7px #fff;
+            transition: all .25s ease-in-out;
         }
 
         .menu-item a:hover,
@@ -441,6 +479,10 @@
             gap: 2rem;
         }
 
+        .pt-10px {
+            padding-top: 1rem;
+        }
+
         .px-20px {
             padding-left: 2rem;
             padding-right: 2rem;
@@ -449,6 +491,11 @@
         .py-26px {
             padding-top: 2.6rem;
             padding-bottom: 2.6rem;
+        }
+
+        .py-60px {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
         }
 
         .mb-30px {
@@ -476,6 +523,7 @@
         }
 
         @media screen and (min-width: 1000px) {
+
             header {
                 padding: 2rem 0;
             }
@@ -510,6 +558,12 @@
         }
 
         @media screen and (max-width: 1240px) {
+
+            .amp-carousel-button {
+                top: unset;
+                bottom: -1.5rem;
+            }
+
             .hero-text {
                 width: auto;
                 font-size: 2.5rem;
@@ -536,6 +590,10 @@
         }
 
         @media screen and (max-width: 1000px) {
+            .amp-carousel-button {
+                bottom: -1.5rem;
+            }
+
             header {
                 padding: 0;
                 position: relative;
@@ -596,7 +654,7 @@
             }
 
             .carousel-container {
-                height: 33rem;
+                height: 38rem;
             }
         }
 
@@ -662,8 +720,29 @@
                 padding-bottom: 3rem;
             }
 
+            .gap-20px-sm {
+                gap: 2rem;
+            }
+
+            .flex-column-sm {
+                flex-direction: column;
+            }
+
+            .py-30px-sm {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+
             .m-0-sm {
                 margin: 0;
+            }
+
+            .flex-sm {
+                display: flex;
+            }
+
+            .gap-20px-sm {
+                gap: 2rem;
             }
 
             .amp-carousel-button {
@@ -823,9 +902,9 @@
             </div>
         </amp-carousel>
     </div>
-    <div class="black-bg">
-        <div class="container">
-            <div class="grid grid-cols-3 gap-20px py-26px flex-md flex-column">
+    <div class="bg-grey">
+        <div class="container py-60px py-30px-sm">
+            <div class="grid grid-cols-3 gap-20px flex-md flex-column">
                 <div class="blue-bg px-20px py-26px white-text">
                     <div class="flex flex-column space-between h-full">
                         <div>
@@ -878,9 +957,59 @@
             </div>
         </div>
     </div>
-    <div class="quote text-center">
+    <div class="quote blue-bg text-center">
         <p class="large bold">„AppGuard should be on every <br>Windows system in the world.“ </p>
-        <p class="author text-primary"><span class="bold">Bob Bigman </span><br>Former CISO, CIA</p>
+        <p class="pt-10px"><span class="bold">Bob Bigman </span><br>Former CISO, CIA</p>
+    </div>
+    <div class="bg-grey">
+        <div class="container py-60px py-30px-sm">
+            <div class="grid grid-cols-2 gap-x-40px gap-y-60px flex-column flex-sm gap-20px-sm">
+                <div class="flex gap-40px align-center">
+                    <div>
+                        <amp-img src="img/certif.png" width="75" height="75" alt="an icon of certificate"
+                                 layout="fixed"></amp-img>
+                    </div>
+                    <div>
+                        <h3 class="text-20px mt-0 mb-1">Certification</h3>
+                        <p class="text-20px m-0">We provide guides and support for obtaining certifications of other
+                            standards.</p>
+                    </div>
+                </div>
+                <div class="flex gap-40px align-center">
+                    <div>
+                        <amp-img src="img/implementace.png" width="75" height="75" alt="an icon of implementation"
+                                 layout="fixed"></amp-img>
+                    </div>
+                    <div>
+                        <h3 class="text-20px mt-0 mb-1">Implementation</h3>
+                        <p class="text-20px m-0">We design and implement measures according to certification
+                            requirements and best practices in cybersecurity.</p>
+                    </div>
+                </div>
+                <div class="flex gap-40px align-center">
+                    <div>
+                        <amp-img src="img/analyza.png" width="75" height="75" alt="an icon of analysis"
+                                 layout="fixed"></amp-img>
+                    </div>
+                    <div>
+                        <h3 class="text-20px mt-0 mb-1">Analysis</h3>
+                        <p class="text-20px m-0">We conduct risk analyses and propose effective solutions for
+                            information security.</p>
+                    </div>
+                </div>
+                <div class="flex gap-40px align-center">
+                    <div>
+                        <amp-img src="img/support.png" width="75" height="75" alt="an icon of consulting"
+                                 layout="fixed"></amp-img>
+                    </div>
+                    <div>
+                        <h3 class="text-20px mt-0 mb-1">Consulting</h3>
+                        <p class="text-20px m-0">We offer training and consulting for effective implementation of
+                            security measures and procedures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 <footer>
