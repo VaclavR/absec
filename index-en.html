@@ -75,13 +75,26 @@
         .amp-carousel-button {
             /*display: none;*/
             cursor: pointer;
-            background-color: #235084;
-            border: 1px solid #235084;
-            transition: background-color .3s ease-in;
+            background-color: transparent;
+            transform: scale(4);
         }
 
-        .amp-carousel-button:hover {
-            background-color: #143659;
+        .amp-carousel-button-prev {
+            left: 5rem;
+            background-image: url("img/left-arrow.svg");
+        }
+
+        .amp-carousel-button-next {
+            right: 5rem;
+            background-image: url("img/right-arrow.svg");
+        }
+
+        .amp-carousel-button-prev:focus,
+        .amp-carousel-button-next:focus,
+        .amp-carousel-button-prev:focus-visible,
+        .amp-carousel-button-next:focus-visible {
+            outline: none;
+            border: none;
         }
 
         * {
