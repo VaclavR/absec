@@ -178,10 +178,12 @@
         .lang-item.active {
             font-weight: bold;
             color: #2d68ac;
+            width: 3rem;
         }
 
         .lang-item {
             padding: 0 .5rem;
+            width: 2.4rem;
         }
 
         .hero .btn {
@@ -270,12 +272,15 @@
             transition: all .25s ease-in-out;
         }
 
+        .menu-item a {
+            transition: font-weight .3s ease-in;
+        }
+
         .menu-item a:hover,
         .menu-item.active a,
         .lang-item a:hover {
             color: #fff;
-            -webkit-text-stroke: .7px #fff;
-            transition: all .25s ease-in-out;
+            font-weight: bold;
         }
 
         .header-inner .menu-item.active a:before,
@@ -703,10 +708,10 @@
         </a>
         <nav class="menu flex align-center">
             <ul class="menu-wrapper flex align-center">
-                <li class="menu-item"><a href="app-guard.html">AppGuard</a></li>
-                <li class="menu-item active"><a href="validato.html">Validato</a></li>
-                <li class="menu-item"><a href="sluzby.html">Služby</a></li>
-                <li class="menu-item"><a href="contact.html">Kontakt</a></li>
+                <li class="menu-item" style="width: 122px;"><a href="app-guard.html">AppGuard</a></li>
+                <li class="menu-item active" style="width: 109px;"><a href="validato.html">Validato</a></li>
+                <li class="menu-item" style="width: 94px;"><a href="sluzby.html">Služby</a></li>
+                <li class="menu-item" style="width: 106px;"><a href="contact.html">Kontakt</a></li>
             </ul>
 
             <ul class="lang-wrapper flex align-center">
